@@ -189,6 +189,10 @@ void how2play()
 	 ch = getch();
     }
 } //how2play
+
+/*
+ * Function 
+ */
 void high_score()
 {
 	char ch,text; 			  //declare "ch" for choice exit //declare "text" for keep charactor form file
@@ -222,6 +226,10 @@ void high_score()
 	}
 	fclose(in); //close file
 } //high_score
+
+/*
+ * Function 
+ */
 void credit()
 {
 	char ch,text; 				//declare "ch" for choice exit //declare "text" for keep charactor form file
@@ -240,6 +248,10 @@ void credit()
 	 ch = getch();
     }
 } //credit
+
+/*
+ * Function 
+ */
 void show_easy(int s[][3])
 {
     int i,j; 											//declare for condition (for loop)
@@ -260,6 +272,10 @@ void show_easy(int s[][3])
     }
         printf("\t|_______|_______|_______|\n");
 } //show_easy
+
+/*
+ * Function 
+ */
 void show_normal(int s[][4])
 {
     int i,j; 											//declare for condition (for loop)
@@ -280,6 +296,10 @@ void show_normal(int s[][4])
     }
     	printf("\t|_______|_______|_______|_______|\n");
 } //show_normal
+
+/*
+ * Function 
+ */
 void show_hard(int s[][5])
 {
     int i,j;											//declare for condition (for loop)
@@ -300,6 +320,10 @@ void show_hard(int s[][5])
         }
         printf("\t|_______|_______|_______|_______|_______|\n");
 } //show_hard
+
+/*
+ * Function 
+ */
 void slideright(int size,int data[][size])
 {
     int i,j,temp;										//declare for function slide
@@ -318,6 +342,10 @@ void slideright(int size,int data[][size])
         }
     }
 } //slideright
+
+/*
+ * Function 
+ */
 void slideleft(int size,int data[][size])
 {
     int i,j,temp;										//delare for function slide
@@ -336,6 +364,10 @@ void slideleft(int size,int data[][size])
         }
     }
 } //slideleft
+
+/*
+ * Function 
+ */
 void slideunder(int size,int data[][size])
 {
     int i,j,temp;										//declare for function slide
@@ -354,6 +386,10 @@ void slideunder(int size,int data[][size])
         }
     }
 } //slideunder
+
+/*
+ * Function 
+ */
 void slideup(int size,int data[][size])
 {
     int i,j,temp;										//declare for function slide
@@ -372,6 +408,10 @@ void slideup(int size,int data[][size])
         }
     }
 } //slideup
+
+/*
+ * Function 
+ */
 char playgame(int size,int arr1[][size],int arr2[][size],int slide,char name[],char level[],float time_show)
 {
 	time_t rawtime; 									//(time) search form Internet
@@ -455,6 +495,10 @@ char playgame(int size,int arr1[][size],int arr2[][size],int slide,char name[],c
 	}
 	return 'e';											//return for exit
 } //playname
+
+/*
+ * Function 
+ */
 float process_time(double a)  								//receviev time form game ("a" = second)
 {
 		float min; 											//declare for convert second to minutes
@@ -465,6 +509,10 @@ float process_time(double a)  								//receviev time form game ("a" = second)
 			return a;										//return a (second)
 		}
 } //process_time
+
+/*
+ * Function 
+ */
 void enter_name(char name[])								//receviev array from game (name == player[] in game)
 {
 	FILE *in;												//declare for open file
@@ -480,6 +528,10 @@ void enter_name(char name[])								//receviev array from game (name == player[]
 	printf("\n\t++ Please enter your name(10 char):  ");
 	scanf("%s",name);
 } //enter_name
+
+/*
+ * Function 
+ */
 void cls(){
     #if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
         system("clear");
@@ -489,6 +541,10 @@ void cls(){
         system("cls");
     #endif
 } //cls
+
+/*
+ * Function 
+ */
 int check(int size,int a[][size], int b[][size])			
 {
 	int i,j,count=0;										//declare "count" for check table
@@ -501,6 +557,10 @@ int check(int size,int a[][size], int b[][size])
 	}
 	    return count;										//return count to game
 } //check
+
+/*
+ * Function 
+ */
 char ready()												//use this for wait function random and return for exit loop
 {
 	FILE *in;												//declare for open file 
@@ -522,6 +582,10 @@ char ready()												//use this for wait function random and return for exit 
 		return 'a';
 	} else return 'b';
 }
+
+/*
+ * Function 
+ */
 void rd_puzzle(int size,int a[][size])
 {
 	int random,i;											//declare "random" for random choice
@@ -582,6 +646,10 @@ void rd_puzzle(int size,int a[][size])
 	 	}													//why many case? because it will not match between two table
 	}
 } //rd_puzzle
+
+/*
+ * Function 
+ */
 void rd_check(int size,int a[][size],int b[][size])
 {
 	int i,j;
@@ -593,6 +661,7 @@ void rd_check(int size,int a[][size],int b[][size])
 			}
 		}
 }
+
 /*char getch(){												//this function  for Linux
     //#include <unistd.h>   //_getch
     //#include <termios.h>  //_getch
@@ -615,7 +684,12 @@ void rd_check(int size,int a[][size],int b[][size])
         perror ("tcsetattr ~ICANON");
     printf("%c\n",buf);
     return buf;
- }*/ //getchlinux
+ }*/ 
+ //getchlinux
+
+/*
+ * Function 
+ */
 void clear_data()
 {
 	FILE *in;												//declare for open file
@@ -668,6 +742,10 @@ void clear_data()
 		}else printf("Data not clear...\n");
 	}
 } //clear_data
+
+/*
+ * Function 
+ */
 void puzzle()
 {
 	FILE *in;												//declare for open file
@@ -683,6 +761,9 @@ void puzzle()
 	fclose(in);												//close file
 } //pluzzle
 
+/*
+ * Function 
+ */
 void mickey()
 {
 	FILE *in;												//declare for open file
