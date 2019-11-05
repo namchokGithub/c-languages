@@ -58,19 +58,23 @@ int main(int argc, char *argv[])
 
 		choice = getch(); 								// function getch(); //choose choice
 		switch(choice){ 								// condition (switch case) for choose choice
-			case '1': cls(); play(); break;   			// calling function
-			case '2': cls(); how2play(); break;
-			case '3': cls(); high_score(); break;
-			case '4': cls(); credit(); break;
+			case '1': cls(); play(); break;   			// calling function menu play
+			case '2': cls(); how2play(); break;			// calling function menu how to play
+			case '3': cls(); high_score(); break;		// calling function menu show score
+			case '4': cls(); credit(); break;			// calling function menu show credit
 			default : printf("Please again...\n"); 		// another case
 		}
 
 	}while(choice != '5' ); 							// end loop do while when 'choice' not equal '5' (charactor)
 	cls(); 
-	mickey(); 											// calling function mickey
+	mickey(); 											// calling function show mickey for TK
 	return 0;
 } // End of main
 
+/*
+ * Function main_menu()
+ * is a function for show main menu
+ */
 void main_menu()
 {
 	FILE *in; 											//declare for open file
@@ -78,51 +82,62 @@ void main_menu()
 	char text; 											//declare for keep charactor form file
 	in = fopen("main_menu.txt","r"); 					//open file "read"
 	result = fscanf(in,"%c",&text); 					//check EOF! and keep charactor 
+
 	while (result != EOF){  							//condition (while) for check EOF!
 		printf("%c",text);  							//output data in file
 		result = fscanf(in,"%c",&text); 				//check EOF! and keep charactor 
 	}
+	// load file menu
 	printf("\n");
 	fclose(in); 										//close file
 } 
 // ENd of main_menu 
 
 
+/*
+ * Function play()
+ * is a function for show level of game and let player choose level for playing
+ */
 void play()
 {				  	
-	PLAYER easy,normal,hard;
+	PLAYER easy,normal,hard;							// declare struct of player
 	easy.size = 3;
-	strcpy(easy.level,"Easy");
+	strcpy(easy.level,"Easy");							// set level is 'Easy'
+
 	normal.size = 4;
-	strcpy(normal.level,"Normal");
+	strcpy(normal.level,"Normal");						// set level is 'Normal'
+
 	hard.size = 5;   
-	strcpy(hard.level,"Hard");
-	int	arr_easy[3][3]	=  {{ 1 , 2 , 3 }, 					//declare arr for everthing
-                  	 	{ 4 , 5 , 6 },
-             	  	    { 7 , 8 , 9 }};
+	strcpy(hard.level,"Hard");							// set level is 'Hard'
+
+	int	arr_easy[3][3]	=  {{ 1 , 2 , 3 }, 				//declare arr for numbering of a game
+							{ 4 , 5 , 6 },
+							{ 7 , 8 , 9 }};
     int arr_normal[4][4] = {{ 1 , 2 , 3 , 4 },				 
-                  		{ 5 , 6 , 7 , 8 },
-                      	{ 9 ,10 ,11 ,12 },
-                        {13 ,14 ,15 ,16 }}; 
+							{ 5 , 6 , 7 , 8 },
+							{ 9 ,10 ,11 ,12 },
+							{13 ,14 ,15 ,16 }}; 
     int arr_hard[5][5] = {{ 1 , 2 , 3 , 4 , 5}, 
-                        { 6 , 7 , 8 , 9 ,10},
-                        {11 ,12 ,13 ,14 ,15},
-                        {16 ,17 ,18 ,19 ,20},
-					    {21 ,22 ,23 ,24 ,25}};
-    char choice,ck_exit; 								//declare for choose choice
-    do{ 												//condition (do_while) for menu
-    	cls(); 											//clear screen
-    	FILE *in;										//declare for open file
-		int result;
-		char text;										//declare for keep charector
+							{ 6 , 7 , 8 , 9 ,10},
+							{11 ,12 ,13 ,14 ,15},
+							{16 ,17 ,18 ,19 ,20},
+							{21 ,22 ,23 ,24 ,25}};
+    char choice,ck_exit; 								// declare for choose choice
+    do{ 												// condition (do_while) for menu
+    	cls(); 											// clear screen
+    	FILE *in;										// declare for open file
+		int result; 
+		char text;										// declare for keep charector
+		
 		in = fopen("level.txt","r");
 		result = fscanf(in,"%c",&text);
 		while (result != EOF){
-		printf("%c",text);
-		result = fscanf(in,"%c",&text);
-		}
-		fclose(in);										//close file
-    	printf("\n\t\t__________________\n"); 			//show menu level
+			printf("%c",text);
+			result = fscanf(in,"%c",&text);
+		}												// Banner of Level
+		fclose(in);										// close file
+
+    	printf("\n\t\t__________________\n"); 			// show menu level
     	printf("\t\t|   Choose Level  |\n");
     	printf("\t\t|                 |\n");
     	printf("\t\t| 1.Easy          |\n");
@@ -132,9 +147,9 @@ void play()
     	printf("\t\t| 3.Hard          |\n");
     	printf("\t\t|_________________|\n");
     	printf("\n\tPress X to exit\n");
-    	choice = getch(); 								//choose choice
-		switch(choice){ 								//condition (switch case) for choose choice
-			case '1': 									//calling function
+    	choice = getch(); 								//	choose choice
+		switch(choice){ 								//	condition (switch case) for choose choice
+			case '1': 									//	calling function
 					do{	
 						ck_exit = playgame(easy.size,arr_easy,arr_easy,easy.slide,easy.name,easy.level,easy.time);
 					}while(ck_exit != 'e');	break; 		
@@ -146,10 +161,12 @@ void play()
 					do{	
 						ck_exit = playgame(hard.size,arr_hard,arr_hard,hard.slide,hard.name,hard.level,hard.time);
 					}while(ck_exit != 'e');	break;
-			default : printf("Please again...\n"); 		//another case
+			default : printf("Please again...\n"); 		// another case
 		}
 	}while(choice != 'x' && choice != 'X');
-} //play
+} 
+// End of function play
+
 void how2play()
 {
 	char ch,text; 				//declare "ch" for choice exit //declare "text" for keep charactor form file
