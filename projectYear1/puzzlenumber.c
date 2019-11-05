@@ -168,6 +168,9 @@ void play()
 } 
 // End of function play
 
+/*
+ * Function 
+ */
 void how2play()
 {
 	char ch,text; 				//declare "ch" for choice exit //declare "text" for keep charactor form file
