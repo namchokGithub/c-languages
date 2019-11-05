@@ -1,0 +1,84 @@
+ > Level easy 
+   pech | 39 times | 11.00 seconds | Mon Dec 04 16:35:31 2017
+
+ > Level hard  
+   PECH | 737 times |  4.30 minutes | Mon Dec 04 16:38:08 2017
+
+ > Level Easy 
+   pech | 37 times | 13.00 seconds | Mon Dec 04 16:43:00 2017
+
+ > Level Easy 
+   pech | 22 times |  6.00 seconds | Mon Dec 04 17:05:39 2017
+
+ > Level Normal 
+   pech | 162 times | 54.00 seconds | Mon Dec 04 17:06:20 2017
+
+ > Level Hard 
+   pech | 318 times |  1.82 minutes | Mon Dec 04 17:07:32 2017
+
+ > Level Easy 
+   pech | 48 times | 16.00 seconds | Mon Dec 04 17:48:13 2017
+
+ > Level Easy 
+   pech | 1 times |  1.00 seconds | Thu Dec 07 17:17:56 2017
+
+ > Level Easy 
+   pech | 1 times |  6.00 seconds | Thu Dec 07 17:18:11 2017
+
+ > Level Easy 
+   pech | 1 times |  1.00 seconds | Thu Dec 07 17:23:47 2017
+
+ > Level Easy 
+   pech | 1 times |  1.00 seconds | Thu Dec 07 17:33:34 2017
+
+ > Level Easy 
+   pech | 0 times |  0.00 minutes | Thu Dec 07 17:40:30 2017
+
+ > Level Easy 
+   pech | 0 times |  8.00 seconds | Thu Dec 07 17:40:41 2017
+
+ > Level Normal 
+   pech | 1 times |  1.00 seconds | Thu Dec 07 17:45:05 2017
+
+ > Level Easy 
+   p | 0 times |  3.00 seconds | Thu Dec 07 17:48:41 2017
+
+ > Level Easy 
+   pech | 1 times |  3.00 seconds | Thu Dec 07 17:51:13 2017
+
+ > Level Easy 
+   pech | 1 times |  0.00 minutes | Thu Dec 07 17:53:29 2017
+
+ > Level w|ü 
+   pech | 1 times |  8.00 seconds | Thu Dec 07 17:53:44 2017
+
+ > Level Easy 
+   pech | 1 times |  1.00 seconds | Thu Dec 07 17:55:32 2017
+
+ > Level Hard 
+   pech | 0 times |  7.00 seconds | Thu Dec 07 17:55:46 2017
+
+ > Level Easy 
+   pech | 1 times |  2.00 seconds | Thu Dec 07 17:58:52 2017
+
+ > Level Easy 
+   pech | 0 times |  4.00 seconds | Thu Dec 07 18:01:13 2017
+
+ > Level Easy 
+   11 | 69 times | 25.00 seconds | Thu Dec 07 18:04:26 2017
+
+ > Level Normal 
+   pech | 6 times |  6.00 seconds | Thu Dec 07 18:05:12 2017
+
+ > Level Easy 
+   1 | 60 times | 59.00 seconds | Thu Dec 07 18:06:40 2017
+
+ > Level Normal 
+   pech | 78 times | 26.00 seconds | Thu Dec 07 18:07:44 2017
+
+ > Level Easy 
+   pech | 77 times | 35.00 seconds | Fri Dec 08 00:58:10 2017
+
+ > Level Easy 
+   pech | 30 times | 19.00 seconds | Sun Nov 03 23:29:55 2019
+
