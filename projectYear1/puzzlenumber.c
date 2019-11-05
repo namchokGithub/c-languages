@@ -2,6 +2,7 @@
 Student name : Namchok Singhachai 
 Student No. 60160169 Section 02
 The projects of Software Engineering #7 BUU60*/
+
 #include<stdio.h> //declare header
 #include<string.h>
 #include<time.h>
