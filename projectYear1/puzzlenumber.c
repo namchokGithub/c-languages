@@ -8,6 +8,8 @@ The projects of Software Engineering #7 BUU60*/
 #include<stdlib.h>
 //#include <unistd.h> //search form Internet
 //#include <termios.h> //search form Internet
+
+// Defind Struct of Player
 typedef struct{
 	char name[10];
 	char level[5];
@@ -15,6 +17,7 @@ typedef struct{
 	int slide;
 	int size;
 }PLAYER;
+
 void clear_data(); //declare function
 void cls();
 void credit();
