@@ -36,7 +36,7 @@ void show_normal(int s[][4]);
 void show_hard(int s[][5]);
 void slideright(int size,int data[][size]);
 void slideleft(int size,int data[][size]);
-void slideunder(int size,int data[][size]);
+void slideUnder(int size,int data[][size]);
 void slideUp(int size,int data[][size]);
 int check( int size,int a[][size], int b[][size]);
 float process_time(double a);
@@ -368,7 +368,7 @@ void slideleft(int size,int data[][size])
 /*
  * Function 
  */
-void slideunder(int size,int data[][size])
+void slideUnder(int size,int data[][size])
 {
     int i,j,temp;										//declare for function slide
     for(i=0;i<size;i++){								
@@ -385,7 +385,7 @@ void slideunder(int size,int data[][size])
             }
         }
     }
-} //slideunder
+} //slideUnder
 
 /*
  * Function 
@@ -461,11 +461,11 @@ char playgame(int size,int arr1[][size],int arr2[][size],int slide,char name[],c
 	    switch(choice){ 								//codition (switch case) for slide number and exit
 	    	case 'w': slideUp(size,arr1); slide++; break;
 	    	case 'd': slideright(size,arr1); slide++; break;	
-	    	case 's': slideunder(size,arr1); slide++; break;
+	    	case 's': slideUnder(size,arr1); slide++; break;
 	    	case 'a': slideleft(size,arr1);	slide++; break;
 	    	case 'W': slideUp(size,arr1); slide++; break;
 	    	case 'D': slideright(size,arr1); slide++; break;	
-	    	case 'S': slideunder(size,arr1); slide++; break;
+	    	case 'S': slideUnder(size,arr1); slide++; break;
 	    	case 'A': slideleft(size,arr1);	slide++; break;
 		}
 		if(count == ck_correct){ 								//conditiom (if) for check if when you finish
@@ -597,52 +597,52 @@ void rd_puzzle(int size,int a[][size])
 				slideleft(size,a);
 				slideUp(size,a);
 				slideright(size,a);
-				slideunder(size,a); break;
+				slideUnder(size,a); break;
 			case 1 : slideleft(size,a);						//switch case random slide
 				slideleft(size,a);
 				slideUp(size,a);
 				slideright(size,a);
-				slideunder(size,a); break;
+				slideUnder(size,a); break;
 			case 2 : slideUp(size,a);						//switch case random slide
 				slideleft(size,a);
 				slideUp(size,a);
 				slideright(size,a);
-				slideunder(size,a); break;
-			case 3 : slideunder(size,a);					//switch case random slide
+				slideUnder(size,a); break;
+			case 3 : slideUnder(size,a);					//switch case random slide
 				slideleft(size,a);
 				slideUp(size,a);
 				slideright(size,a);
-				slideunder(size,a); break;
+				slideUnder(size,a); break;
 			case 4 : slideright(size,a);					//switch case random slide
 				slideleft(size,a);
 				slideUp(size,a);
 				slideright(size,a);
-				slideunder(size,a); break;
+				slideUnder(size,a); break;
 			case 5 : slideUp(size,a);						//switch case random slide
 				slideleft(size,a);
 				slideUp(size,a);
 				slideright(size,a);
-				slideunder(size,a); break;
-			case 6 : slideunder(size,a);					//switch case random slide
+				slideUnder(size,a); break;
+			case 6 : slideUnder(size,a);					//switch case random slide
 				slideleft(size,a);
 				slideUp(size,a);
 				slideright(size,a);
-				slideunder(size,a); break;
+				slideUnder(size,a); break;
 			case 7 : slideleft(size,a);						//switch case random slide
 				slideleft(size,a);
 				slideUp(size,a);
 				slideright(size,a);
-				slideunder(size,a); break;
+				slideUnder(size,a); break;
 			case 8 : slideright(size,a);					//switch case random slide
 				slideleft(size,a);
 				slideUp(size,a);
 				slideright(size,a);
-				slideunder(size,a); break;
+				slideUnder(size,a); break;
 			case 9 : slideUp(size,a);						//switch case random slide
 				slideleft(size,a);
 				slideUp(size,a);
 				slideright(size,a);
-				slideunder(size,a); break;
+				slideUnder(size,a); break;
 	 	}													//why many case? because it will not match between two table
 	}
 } //rd_puzzle
