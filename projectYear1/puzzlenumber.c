@@ -49,11 +49,13 @@ int main(int argc, char *argv[])
 	char choice; 										// declare variable
 	do{ 												// condition (do_while) for menu
 		cls();  										// clear screen 
-		puzzle(); 										// calling function
-		main_menu();
-		time_t rawtime;					 				// search form Internet
+		puzzle(); 										// calling function load logo
+		main_menu();									// calling function load menu
+
+		time_t rawtime;					 				// function timer
     	time (&rawtime);
-        printf("\t\t       %s\n",ctime(&rawtime));
+        printf("\t\t       %s\n",ctime(&rawtime));		// show time
+
 		choice = getch(); 								// function getch(); //choose choice
 		switch(choice){ 								// condition (switch case) for choose choice
 			case '1': cls(); play(); break;   			// calling function
@@ -62,7 +64,8 @@ int main(int argc, char *argv[])
 			case '4': cls(); credit(); break;
 			default : printf("Please again...\n"); 		// another case
 		}
-	}while(choice != '5' ); 
+
+	}while(choice != '5' ); 							// end loop do while when 'choice' not equal '5' (charactor)
 	cls(); 
 	mickey(); 											// calling function mickey
 	return 0;
@@ -658,6 +661,7 @@ void puzzle()
 	printf("\n\n");
 	fclose(in);												//close file
 } //pluzzle
+
 void mickey()
 {
 	FILE *in;												//declare for open file
