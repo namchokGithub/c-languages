@@ -46,27 +46,28 @@ char ready();
 // Main of programs
 int main(int argc, char *argv[])
 {
-	char choice; 										//declare variable
-	do{ 												//condition (do_while) for menu
-		cls();  										//clear screen 
-		puzzle(); 										//calling function
+	char choice; 										// declare variable
+	do{ 												// condition (do_while) for menu
+		cls();  										// clear screen 
+		puzzle(); 										// calling function
 		main_menu();
-		time_t rawtime;					 				//search form Internet
+		time_t rawtime;					 				// search form Internet
     	time (&rawtime);
         printf("\t\t       %s\n",ctime(&rawtime));
-		choice = getch(); 								//function getch(); //choose choice
-		switch(choice){ 								//condition (switch case) for choose choice
-			case '1': cls(); play(); break;   			//calling function
+		choice = getch(); 								// function getch(); //choose choice
+		switch(choice){ 								// condition (switch case) for choose choice
+			case '1': cls(); play(); break;   			// calling function
 			case '2': cls(); how2play(); break;
 			case '3': cls(); high_score(); break;
 			case '4': cls(); credit(); break;
-			default : printf("Please again...\n"); 		//another case
+			default : printf("Please again...\n"); 		// another case
 		}
 	}while(choice != '5' ); 
 	cls(); 
-	mickey(); 											//calling function mickey
+	mickey(); 											// calling function mickey
 	return 0;
-} //main
+} // End of main
+
 void main_menu()
 {
 	FILE *in; 											//declare for open file
@@ -81,7 +82,7 @@ void main_menu()
 	printf("\n");
 	fclose(in); 										//close file
 } 
-// ENd of main 
+// ENd of main_menu 
 
 
 void play()
