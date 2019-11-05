@@ -79,8 +79,11 @@ void main_menu()
 		result = fscanf(in,"%c",&text); 				//check EOF! and keep charactor 
 	}
 	printf("\n");
-	fclose(in); 										//closr file
-} //main_menu
+	fclose(in); 										//close file
+} 
+// ENd of main 
+
+
 void play()
 {				  	
 	PLAYER easy,normal,hard;
