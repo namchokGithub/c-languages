@@ -42,6 +42,8 @@ float process_time(double a);
 char playgame(int size,int arr1[][size],int arr2[][size],int slide,char name[],char level[],float time_show);
 char getch();
 char ready();
+
+// Main of programs
 int main(int argc, char *argv[])
 {
 	char choice; 										//declare variable
